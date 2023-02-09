@@ -31,5 +31,6 @@ jobs:
     - uses: actions/upload-artifact@v3
       with:
        name: test
-       path: build/libs
+       run: 
+             main.java
       
