@@ -35,15 +35,15 @@ jobs:
        
        
   tests:
-    name: Run Unit Tests and Analyse
+    name: Run Unit Tests
     runs-on: ubuntu-latest
     steps:
-      - uses: bcgov-nr/action-test-and-analyse-java@v.11.0.17
+      - uses: bcgov-nr/action-test-java@v.11
         with:
           commands: |
-            ./gradle test
+            ./gradle clean test
           dir: frontend
           java-cache: gradle
           java-distribution: temurin
-          java-version: "17"
+          java-version: "11"
       
