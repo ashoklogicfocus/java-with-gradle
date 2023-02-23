@@ -32,4 +32,18 @@ jobs:
       with:
        name: test
        path: build/libs
+       
+       
+  tests:
+    name: Run Unit Tests and Analyse
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: bcgov-nr/action-test-and-analyse-java@v.0.1.0
+        with:
+          commands: |
+            ./gradle test
+          dir: frontend
+          java-cache: gradle
+          java-distribution: temurin
+          java-version: "17"
       
