@@ -34,7 +34,6 @@ jobs:
  
   test:
     needs: [ build ]
- 
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v3
